@@ -1,0 +1,14 @@
+{
+    "strings": {
+        "meta": {
+            "tabTitle": "Spotify Technical Piperlab Test"
+        },
+        "cover": {
+            "title": "Spotify",
+            "description": "Technical Piperlab Test",
+            "buttonLogin": "Iniciar sesión",
+            "buttonMenu": "Ir al menú",
+            "signature": "Desarrollado por Iván López Ruiz"
+        }
+    }
+}

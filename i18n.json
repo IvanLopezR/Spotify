@@ -1,0 +1,13 @@
+{
+  "locales": ["es"],
+  "defaultLocale": "es",
+  "pages": {
+      "*": ["common"],
+      "/": ["home"],
+      "/menu": ["menu"],
+      "/mis-listas": ["myLists"],
+      "/crear-lista": ["newList"],
+      "/buscar-artista": ["artists"],
+      "/buscar-cancion": ["tracks"]
+  }
+}

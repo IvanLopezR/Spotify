@@ -1,0 +1,5 @@
+service-worker.js
+server.babel.js
+/.next
+/public
+/node_modules

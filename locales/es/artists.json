@@ -1,0 +1,11 @@
+{
+    "strings": {
+        "meta": {
+            "tabTitle": "Buscar Artista | Spotify Technical Piperlab Test"
+        },
+        "artists": {
+            "title": "Buscar artista",
+            "placeholder": "Nombre del artista"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "strings": {
+        "meta": {
+            "tabTitle": "Buscar Canción | Spotify Technical Piperlab Test"
+        },
+        "tracks": {
+            "title": "Buscar canción",
+            "placeholder": "Nombre de la canción",
+            "playListsTitle": "Seleccione la lista a la que se añadirá la canción seleccionada",
+            "noPlayLists": "No tienes ninguna PlayLists en tu cuenta"
+        }
+    }
+}

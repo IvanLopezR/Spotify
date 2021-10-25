@@ -1,0 +1,28 @@
+{
+    "strings": {
+        "meta": {
+            "tabTitle": "Menu | Spotify Technical Piperlab Test"
+        },
+        "menu": {
+            "title": "Menú",
+            "options": [
+                {
+                    "title": "Buscar artista",
+                    "url": "/buscar-artista"
+                },
+                {
+                    "title": "Buscar canción",
+                    "url": "/buscar-cancion"
+                },
+                {
+                    "title": "Crear lista",
+                    "url": "/crear-lista"
+                },
+                {
+                    "title": "Mis Playlists",
+                    "url": "/mis-listas"
+                }
+            ]
+        }
+    }
+}

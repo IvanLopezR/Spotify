@@ -1,0 +1,13 @@
+{
+    "strings": {
+        "meta": {
+            "tabTitle": "Nueva Playlist | Spotify Technical Piperlab Test"
+        },
+        "newList": {
+            "title": "Nueva Playlists",
+            "name": "Nombre",
+            "description": "Descripción",
+            "btn": "Crear"
+        }
+    }
+}
