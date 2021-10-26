@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 
 import { LoginRequired } from "../../components";
 
-const axios = require("axios");
-
 //REDUX
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
@@ -22,7 +20,7 @@ const MenuComponent = ({
     className,
     userToken,
     setUserToken,
-    strings: { title, options, lists },
+    strings: { title, options },
 }) => {
 
     useEffect(() => {
