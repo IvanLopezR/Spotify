@@ -59,8 +59,6 @@ const MyListsComponents = ({ className, strings, userToken }) => {
             .catch((error) => console.log(error.response.data.error));
     }, [userToken]);
 
-    console.log(listsInfo)
-
     let total = listsInfo.total !== undefined ? listsInfo.total : 0;
 
     const showLists = () => {
