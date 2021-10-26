@@ -6,7 +6,7 @@ import { LoginRequired, SliderLists, PlayListTracks } from "../../components";
 
 const axios = require("axios");
 
-import { playlistTracks, userLists } from "../../utils/SpotifyAPI";
+import { userLists } from "../../utils/SpotifyAPI";
 
 //REDUX
 import { connect } from "react-redux";
@@ -59,11 +59,15 @@ const MyListsComponents = ({ className, strings, userToken }) => {
             .catch((error) => console.log(error.response.data.error));
     }, [userToken]);
 
+    console.log(listsInfo)
+
+    let total = listsInfo.total !== undefined ? listsInfo.total : 0;
+
     const showLists = () => {
         return (
             <div className="my-lists-component__container">
                 <p className="my-lists-component__container__title">
-                    {strings.title + `: ` + listsInfo.total}
+                    {strings.title +  `: ` + total}
                 </p>
                 <div className="my-lists-component__container__list">
                     {listsInfo.items?.length > 0 && (
