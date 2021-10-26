@@ -71,7 +71,6 @@ const Search = ({ className, strings, type, userToken }) => {
         const data = addTrackToPlaylist(listSelected.id, track.uri, userToken);
         axios(data.endpoint, data.atributes)
             .then((response) => {
-                console.log(response);
                 modalAnimation(modalRef, finishedAnimation);
             })
             .catch((error) => console.log(error.response.data.error));

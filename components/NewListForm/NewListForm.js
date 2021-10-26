@@ -64,7 +64,6 @@ const NewListForm = ({ className, strings, userToken }) => {
         );
         axios(data.endpoint, data.atributes)
             .then((response) => {
-                console.log(response);
                 modalAnimation(modalRef, finishedAnimation);
             })
             .catch((error) => console.log(error.response.data.error));

@@ -4,9 +4,6 @@ export function modalAnimation(element, handleCallbackAnimationFinished) {
     // Nuevo TimeLine
     let tl = new TimelineLite({ paused: true });
 
-    console.log(element);
-    console.log(handleCallbackAnimationFinished);
-
     let ready = {
         display: "flex",
         duration: 0.1,
