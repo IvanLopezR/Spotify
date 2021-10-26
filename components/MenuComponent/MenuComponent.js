@@ -24,6 +24,7 @@ const MenuComponent = ({
     setUserToken,
     strings: { title, options, lists },
 }) => {
+
     useEffect(() => {
         if (
             window &&
@@ -34,36 +35,6 @@ const MenuComponent = ({
             setUserToken(pathArray.split("=")[1]);
         }
     });
-
-    useEffect(() => {
-        axios("https://accounts.spotify.com/api/token", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-                Authorization:
-                    "Basic " +
-                    btoa(
-                        "445566ef901e4c2fbdcc0c23906d027f" +
-                            ":" +
-                            "8af7ecc0f2fc44b79ea03414ef222390"
-                    ),
-            },
-            data: "grant_type=client_credentials",
-        })
-            .then((tokenResponse) => {
-                // axios('https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02/top-tracks?market=US', {
-                //     method: 'GET',
-                //     headers: {
-                //         'Content-Type': 'application/json',
-                //         'Accept': 'application/json',
-                //         'Authorization': 'Bearer ' + tokenResponse.data.access_token
-                //     },
-                // }).then(response => {
-                //     console.log(response.data);
-                // }).catch(error => console.log(error.response.data.error));
-            })
-            .catch((error) => console.log(error.response.data.error));
-    }, [userToken]);
 
     const goTo = (page) => {
         router.push(page);
