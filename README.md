@@ -21,10 +21,13 @@
     <li> Have a Spotify account.</li>
     <li> Create an app in the Spotify dashboard: https://developer.spotify.com/</li>
     <li> Create a file .env.local in the root of the project that contain only 2 lines with this constants and the values that you will obtain when create the app in the dashboard:
-        CLIENT_ID=445.....
-        CLIENT_SECRET=8af.....</li>
+    <ul>
+        <li>CLIENT_ID=445.....</li>
+        <li>CLIENT_SECRET=8af.....</li>
+    </ul>
+    </li>
     <li> Install the necessaries modules running the command <i>npm i</i> in the terminal.
 </ul>
 
-<p>Now you can run the project running <i>npm run dev</i> command in the terminal and see the result in http://localhost:3000/</p>
+<b>Now you can run the project running <i>npm run dev</i> command in the terminal and see the result in http://localhost:3000/</b>
 
