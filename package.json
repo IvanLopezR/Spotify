@@ -1,5 +1,5 @@
 {
-  "name": "Spotify",
+  "name": "spotify",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,13 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint \"./**/*.js\"",
-    "lint:fix": "eslint \"./**/*.js\" --fix"
+    "lint:fix": "eslint \"./**/*.js\" --fix",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@formatjs/intl-getcanonicallocales": "1.5.8",
     "@formatjs/intl-locale": "2.4.21",
     "@formatjs/intl-pluralrules": "4.0.13",
     "axios": "0.23.0",
+    "cypress": "8.7.0",
     "gsap": "3.2.6",
     "husky": "7.0.2",
     "next": "11.1.2",

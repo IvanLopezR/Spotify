@@ -1,6 +1,6 @@
 {
   "name": "Spotify",
-  "short_name": "Spotify",
+  "short_name": "spotify",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#FFFFFF",
