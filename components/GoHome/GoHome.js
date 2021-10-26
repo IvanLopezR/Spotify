@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import Router from 'next/router';
 
-const GoHome = ({ className }) => {
+const GoHome = ({ className, logo }) => {
 
     const returnHome = () => {
         Router.push("/");
@@ -11,13 +11,14 @@ const GoHome = ({ className }) => {
 
     return (
         <div className={`${className} go-home`}>
-            <img className="go-home__img" src="https://cdn2.downdetector.com/static/uploads/logo/Spotify_Logo_RGB_Green.png" alt="Home" title="Ir a inicio" onClick={() => returnHome()} />
+            <img className="go-home__img" src={logo} alt="Home" title="Ir a inicio" onClick={() => returnHome()} />
         </div>
     );
 };
 
 GoHome.propTypes = {
-    className: PropTypes.string
+    className: PropTypes.string,
+    logo: PropTypes.string
 };
 
 export default GoHome;

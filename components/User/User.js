@@ -12,7 +12,7 @@ const mapStateToProps = (state) => ({
     userToken: state.userToken.userToken,
 });
 
-const User = ({ className, userToken }) => {
+const User = ({ className, userToken, logo }) => {
     const [userInfo, setUserInfo] = useState(true);
 
     useEffect(() => {
@@ -28,7 +28,7 @@ const User = ({ className, userToken }) => {
         <div className={className + ` user`}>
             <img
                 className="user__img"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1024px-Circle-icons-profile.svg.png"
+                src={logo}
                 alt="user"
             />
             <div className="user__text">
@@ -43,6 +43,7 @@ const User = ({ className, userToken }) => {
 
 User.propTypes = {
     className: PropTypes.string,
+    logo: PropTypes.string
 };
 
 export default connect(mapStateToProps, null)(User);

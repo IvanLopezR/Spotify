@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import Cover from './Cover';
+import Cover from "./Cover";
 
 export default styled(Cover).attrs({})`
     width: 100%;
@@ -27,7 +27,6 @@ export default styled(Cover).attrs({})`
                 justify-content: center;
                 margin-left: 30px;
                 &__title{
-                    color: deeppink;
                     font-size: 5rem;
                     color: #000000;
                 }
@@ -66,15 +65,71 @@ export default styled(Cover).attrs({})`
             font-size: .8rem;
             border-bottom: 1px solid rgb(0,0,0,.5);
             padding: 5px 0;
+            text-decoration: none;
+            color: inherit;
         }
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
-
+        .cover {
+            &__header{
+                &__img{
+                    width: 220px;
+                    height: 220px;
+                }
+                &__title-container{
+                    &__title{
+                        font-size: 5.5rem;
+                    }
+                    &__subtitle{
+                        font-size: 1.46rem;
+                    }
+                }
+            }
+            &__login{
+                &__button{
+                    &__text{
+                        font-size: 1.1rem;
+                        line-height: 2.7rem;
+                        padding: 12px;
+                    }
+                }
+            }
+            &__signature{
+                font-size: .9rem;
+            }
+        }
     }
 
     @media (min-width: 1700px) {
-
+        .cover {
+            &__header{
+                &__img{
+                    width: 240px;
+                    height: 240px;
+                }
+                &__title-container{
+                    &__title{
+                        font-size: 5.8rem;
+                    }
+                    &__subtitle{
+                        font-size: 1.55rem;
+                    }
+                }
+            }
+            &__login{
+                &__button{
+                    &__text{
+                        font-size: 1.2rem;
+                        line-height: 2.9rem;
+                        padding: 14px;
+                    }
+                }
+            }
+            &__signature{
+                font-size: .9rem;
+            }
+        }
     }
 
 `;

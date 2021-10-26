@@ -16,11 +16,20 @@ export default styled(GoHome).attrs({})`
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
+        width: 150px;
+        .go-home {
+            &__img{
+            }
+        }
 
     }
 
     @media (min-width: 1700px) {
-
+        width: 175px;
+        .go-home {
+            &__img{
+            }
+        }
     }
 
 `;

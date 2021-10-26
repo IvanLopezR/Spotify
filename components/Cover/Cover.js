@@ -13,7 +13,7 @@ const mapStateToProps = (state) => ({
 
 const Cover = ({
     className,
-    strings: { title, description, buttonLogin, buttonMenu, signature },
+    strings: { title, description, buttonLogin, buttonMenu, link, signature, img },
     userToken
 }) => {
 
@@ -60,7 +60,7 @@ const Cover = ({
             <div className="cover__header">
                 <img
                     className="cover__header__img"
-                    src="https://play-lh.googleusercontent.com/UrY7BAZ-XfXGpfkeWg0zCCeo-7ras4DCoRalC_WXXWTK9q5b0Iw7B0YQMsVxZaNB7DM"
+                    src={`${img}`}
                     alt="spotify-logo"
                 />
                 <div className="cover__header__title-container">
@@ -73,7 +73,7 @@ const Cover = ({
                 </div>
             </div>
             <div className="cover__login">{loginOrMenu()}</div>
-            <span className="cover__signature">{signature}</span>
+            <a href={link} target="_blank" className="cover__signature">{signature}</a>
         </div>
     );
 };

@@ -25,11 +25,26 @@ export default styled(LoginRequired).attrs({})`
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
+        .login-required {
+            &__img{
+                width: 175px;
+            }
+            &__text{
+                font-size: 1.3rem;
+            }
+        }
 
     }
 
     @media (min-width: 1700px) {
-
+        .login-required {
+            &__img{
+                width: 200px;
+            }
+            &__text{
+                font-size: 1.5rem;
+            }
+        }
     }
 
 `;

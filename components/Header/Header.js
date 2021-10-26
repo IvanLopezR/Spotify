@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { useRouter } from 'next/router';
 
+import useTranslation from "next-translate/useTranslation";
+
 import { GoHome, User } from "../../components";
 
 //REDUX
@@ -17,6 +19,9 @@ const Header = ({ className, userToken }) => {
 
     const [home, setHome] = useState(true);
 
+    const { t } = useTranslation();
+    const strings = t("common:strings", {}, { returnObjects: true });
+
     useEffect(() => {
         if (window) {
             window.location.pathname === "/" ? setHome(true) : setHome(false);
@@ -28,8 +33,8 @@ const Header = ({ className, userToken }) => {
     } else {
         return (
             <div className={`${className} header`}>
-                <GoHome />
-                {userToken && <User />}
+                <GoHome logo={strings.imgHeader}/>
+                {userToken && <User logo={strings.imgProfile} />}
             </div>
         );
     }

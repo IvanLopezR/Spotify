@@ -108,8 +108,106 @@ export default styled(MyListsComponent).attrs({})`
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
+        .my-lists-component {
+            &__container {
+                &__title {
+                    font-size: 3rem;
+                }
+                &__list {
+                }
+            }
+        }
+
+        .slick-slider {
+            .slick-dots {
+                li {
+                    button {
+                        &:before {
+                        }
+                    }
+                    &.slick-active {
+                        button {
+                        }
+                    }
+                }
+            }
+        }
+
+        .sliderCustom {
+        }
+
+        .slick-list {
+        }
+
+        .slick-track {
+        }
+
+        .slick-slide {
+        }
+
+        .slick-prev,
+        .slick-next {
+            top: 45%;
+            :hover{
+            }
+        }
+
+        .slick-prev {
+        }
+
+        .slick-next {
+        }
     }
 
     @media (min-width: 1700px) {
+        .my-lists-component {
+            &__container {
+                &__title {
+                    font-size: 3.3rem;
+                }
+                &__list {
+                }
+            }
+        }
+
+        .slick-slider {
+            .slick-dots {
+                li {
+                    button {
+                        &:before {
+                        }
+                    }
+                    &.slick-active {
+                        button {
+                        }
+                    }
+                }
+            }
+        }
+
+        .sliderCustom {
+        }
+
+        .slick-list {
+        }
+
+        .slick-track {
+        }
+
+        .slick-slide {
+        }
+
+        .slick-prev,
+        .slick-next {
+            top: 45%;
+            :hover{
+            }
+        }
+
+        .slick-prev {
+        }
+
+        .slick-next {
+        }
     }
 `;

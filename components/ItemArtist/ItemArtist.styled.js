@@ -23,8 +23,28 @@ export default styled(ItemArtist).attrs({})`
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
+        &:last-child {
+        }
+        .item-artist {
+            &__img {
+                width: 70px;
+            }
+            &__name {
+                font-size: 1.4rem;
+            }
+        }
     }
 
     @media (min-width: 1700px) {
+        &:last-child {
+        }
+        .item-artist {
+            &__img {
+                width: 75px;
+            }
+            &__name {
+                font-size: 1.6rem;
+            }
+        }
     }
 `;

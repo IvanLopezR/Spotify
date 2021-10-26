@@ -1,5 +1,8 @@
 {
     "strings": {
-        "noLogin": "Por favor, regrese a la pantalla inicial e inicie sesión."
+        "noLogin": "Por favor, regrese a la pantalla inicial e inicie sesión.",
+        "imgLogin": "images/login.png",
+        "imgProfile": "images/profile.png",
+        "imgHeader": "images/spotify_large.png"
     }
 }

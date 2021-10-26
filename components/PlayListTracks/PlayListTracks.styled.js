@@ -37,8 +37,38 @@ export default styled(PlayListTracks).attrs({})`
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
+        max-height: 125px;
+        .playlist-tracks {
+            &__list {
+                li {
+                }
+                img {
+                    height: 75px;
+                    width: 75px;
+                }
+                div {
+                }
+                button {
+                }
+            }
+        }
     }
 
     @media (min-width: 1700px) {
+        max-height: 150px;
+        .playlist-tracks {
+            &__list {
+                li {
+                }
+                img {
+                    height: 85px;
+                    width: 85px;
+                }
+                div {
+                }
+                button {
+                }
+            }
+        }
     }
 `;

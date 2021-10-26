@@ -17,11 +17,34 @@ export default styled(ItemPlayLists).attrs({})`
             width: 60px;
             margin-right: 12px;
         }
+        &__name{
+            font-size: 1rem;
+        }
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
+        &:last-child {
+        }
+        .item-playlists {
+            &__img{
+                width: 68px;
+            }
+            &__name{
+                font-size: 1.2rem;
+            }
+        }
     }
 
     @media (min-width: 1700px) {
+        &:last-child {
+        }
+        .item-playlists {
+            &__img{
+                width: 75px;
+            }
+            &__name{
+                font-size: 1.4rem;
+            }
+        }
     }
 `;

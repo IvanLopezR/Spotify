@@ -5,7 +5,7 @@ import User from "./User";
 export default styled(User).attrs({})`
     position: absolute;
     top: 10px;
-    right: 2%;
+    right: 1%;
     width: 40px;
     display: flex;
     flex-direction: row-reverse;
@@ -29,8 +29,32 @@ export default styled(User).attrs({})`
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
+        .user {
+            &__img {
+            }
+            &__text {
+                &__name {
+                    font-size: 1.1rem;
+                }
+                &__email {
+                    font-size: 0.9rem;
+                }
+            }
+        }
     }
 
     @media (min-width: 1700px) {
+        .user {
+            &__img {
+            }
+            &__text {
+                &__name {
+                    font-size: 1.2rem;
+                }
+                &__email {
+                    font-size: 1rem;
+                }
+            }
+        }
     }
 `;

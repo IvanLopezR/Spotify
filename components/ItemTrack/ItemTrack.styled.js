@@ -60,8 +60,66 @@ export default styled(ItemTrack).attrs({})`
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
+        &:last-child {
+        }
+        .item-track {
+            &__img {
+                width: 70px;
+            }
+            &__text {
+
+                &__track {
+                    font-size: 1.5rem;
+                }
+                &__artists {
+                    &__item {
+                        font-size: 1.2rem;
+                        &__separator{
+                        }
+                    }
+                }
+            }
+            &__btn{
+                width: 35px;
+                height: 35px;
+                &:hover{
+                }
+                &__icon{
+                    font-size: 1.7rem;
+                }
+            }
+        }
     }
 
     @media (min-width: 1700px) {
+        &:last-child {
+        }
+        .item-track {
+            &__img {
+                width: 75px;
+            }
+            &__text {
+
+                &__track {
+                    font-size: 1.7rem;
+                }
+                &__artists {
+                    &__item {
+                        font-size: 1.4rem;
+                        &__separator{
+                        }
+                    }
+                }
+            }
+            &__btn{
+                width: 40px;
+                height: 40px;
+                &:hover{
+                }
+                &__icon{
+                    font-size: 1.9rem;
+                }
+            }
+        }
     }
 `;

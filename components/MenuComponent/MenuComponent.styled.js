@@ -49,8 +49,44 @@ export default styled(MenuComponent).attrs({})`
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
+        .menu-component {
+            &__container {
+                &__list {
+                    font-size: 1.7rem;
+                    &__element {
+                        width: 325px;
+                        height: 175px;
+                        &:hover {
+                        }
+                        &__text {
+                        }
+                    }
+                }
+                &__title {
+                    font-size: 3rem;
+                }
+            }
+        }
     }
 
     @media (min-width: 1700px) {
+        .menu-component {
+            &__container {
+                &__list {
+                    font-size: 2rem;
+                    &__element {
+                        width: 350px;
+                        height: 200px;
+                        &:hover {
+                        }
+                        &__text {
+                        }
+                    }
+                }
+                &__title {
+                    font-size: 3.2rem;
+                }
+            }
+        }
     }
 `;

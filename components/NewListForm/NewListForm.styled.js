@@ -80,8 +80,56 @@ export default styled(NewListForm).attrs({})`
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
+        .new-list-form {
+            &__container {
+                &__notification {
+                    &__container {
+                        &__text {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+                &__title {
+                    font-size: 2.9rem;
+                }
+                &__principal {
+                    &__input {
+                        width: 225px;
+                        height: 60px;
+                        font-size: 1.7rem;
+                    }
+                    &__btn {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
     }
 
     @media (min-width: 1700px) {
+        .new-list-form {
+            &__container {
+                &__notification {
+                    &__container {
+                        &__text {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+                &__title {
+                    font-size: 3.1rem;
+                }
+                &__principal {
+                    &__input {
+                        width: 250px;
+                        height: 75px;
+                        font-size: 1.9rem;
+                    }
+                    &__btn {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
     }
 `;

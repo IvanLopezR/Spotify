@@ -70,7 +70,8 @@ export default styled(Search).attrs({})`
                     height: 40vh;
                     overflow-y: scroll;
                     padding: 0 20px;
-                    border-radius: 20px;
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
                     background-color: rgb(203, 118, 108, 0.5);
                     &__list {
                         padding-inline-start: 0;
@@ -99,8 +100,72 @@ export default styled(Search).attrs({})`
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
+        .search {
+            &__container {
+                &__notification {
+                    &__container {
+                        &__text {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+                &__title {
+                    font-size: 3rem;
+                }
+                &__principal {
+                    &__input {
+                        width: 325px;
+                        height: 60px;
+                        font-size: 1.6rem;
+                    }
+                    &__results {
+                        &__list {
+                        }
+                    }
+                    &__playLists {
+                        &__title {
+                            font-size: 1.4rem;
+                        }
+                        &__list {
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @media (min-width: 1700px) {
+        .search {
+            &__container {
+                &__notification {
+                    &__container {
+                        &__text {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+                &__title {
+                    font-size: 3.2rem;
+                }
+                &__principal {
+                    &__input {
+                        width: 350px;
+                        height: 70px;
+                        font-size: 1.8rem;
+                    }
+                    &__results {
+                        &__list {
+                        }
+                    }
+                    &__playLists {
+                        &__title {
+                            font-size: 1.6rem;
+                        }
+                        &__list {
+                        }
+                    }
+                }
+            }
+        }
     }
 `;

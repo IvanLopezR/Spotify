@@ -11,7 +11,7 @@ const LoginRequired = ({ className }) => {
         <div className={className + ` login-required`}>
             <img
                 className="login-required__img"
-                src="http://www.countryislesexecutivehomes.com/wp-content/uploads/2018/10/login.png"
+                src={strings.imgLogin}
                 alt="login required"
             />
             <p className="login-required__text">{strings.noLogin}</p>
