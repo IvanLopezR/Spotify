@@ -1,24 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 const SliderLists = ({ className, data, selectPlayList }) => {
-
     const visitListPage = () => {
         window.open(data.external_urls.spotify);
-    }
+    };
 
     return (
-        <div className={className + ' slider-lists'}>
+        <div className={className + " slider-lists"}>
             <img
                 className="slider-lists__img"
                 src={data.images[0].url}
                 alt="caratula"
-                onClick={()=>selectPlayList(data.id)}
+                onClick={() => selectPlayList(data.id)}
             />
-            <span className="slider-lists__name">
-                {data.name}
+            <span className="slider-lists__name">{data.name}</span>
+            <span
+                className="slider-lists__link"
+                onClick={() => visitListPage()}
+            >
+                Ver en Spotify.com
             </span>
-            <span className="slider-lists__link" onClick={()=>visitListPage()}>Ver en Spotify.com</span>
         </div>
     );
 };
@@ -26,7 +28,7 @@ const SliderLists = ({ className, data, selectPlayList }) => {
 SliderLists.propTypes = {
     className: PropTypes.string,
     data: PropTypes.object,
-    selectPlayList: PropTypes.func
+    selectPlayList: PropTypes.func,
 };
 
 export default SliderLists;

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import Slider from 'react-slick';
+import Slider from "react-slick";
 
-import { LoginRequired, SliderLists, PlayListTracks } from '../../components';
+import { LoginRequired, SliderLists, PlayListTracks } from "../../components";
 
 const axios = require("axios");
 
@@ -20,31 +20,35 @@ const MyListsComponents = ({ className, strings, userToken }) => {
     const [playListSelected, setPlayListSelected] = useState(null);
 
     const getCurrentSlider = (slide) => {
-        if(listsInfo.items.length - 3 === slide){
-            document.getElementsByClassName('slick-next')[0].style.display='none';
-        } else{
-            document.getElementsByClassName('slick-next')[0].style.display='block';
+        if (listsInfo.items.length - 3 === slide) {
+            document.getElementsByClassName("slick-next")[0].style.display =
+                "none";
+        } else {
+            document.getElementsByClassName("slick-next")[0].style.display =
+                "block";
         }
-        if(slide === 0){
-            document.getElementsByClassName('slick-prev')[0].style.display='none';
-        } else{
-            document.getElementsByClassName('slick-prev')[0].style.display='block';
+        if (slide === 0) {
+            document.getElementsByClassName("slick-prev")[0].style.display =
+                "none";
+        } else {
+            document.getElementsByClassName("slick-prev")[0].style.display =
+                "block";
         }
-    }
+    };
 
     const listsSettings = {
-        className: 'sliderCustom',
+        className: "sliderCustom",
         dots: true,
         infinite: false,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        afterChange: (current) => getCurrentSlider(current)
+        afterChange: (current) => getCurrentSlider(current),
     };
 
     const selectPlayList = (id) => {
         setPlayListSelected(id);
-    }
+    };
 
     useEffect(() => {
         const data = userLists(userToken);
@@ -56,11 +60,13 @@ const MyListsComponents = ({ className, strings, userToken }) => {
     }, [userToken]);
 
     const showLists = () => {
-        return(
+        return (
             <div className="my-lists-component__container">
-                <p className="my-lists-component__container__title">{strings.title+`: `+listsInfo.total}</p>
+                <p className="my-lists-component__container__title">
+                    {strings.title + `: ` + listsInfo.total}
+                </p>
                 <div className="my-lists-component__container__list">
-                    {(listsInfo.items?.length > 0) && (
+                    {listsInfo.items?.length > 0 && (
                         <Slider {...listsSettings}>
                             {listsInfo.items.map((item, key) => (
                                 <SliderLists
@@ -72,19 +78,22 @@ const MyListsComponents = ({ className, strings, userToken }) => {
                         </Slider>
                     )}
                 </div>
-                {playListSelected && <PlayListTracks playListId={playListSelected} userToken={userToken}/>}
+                {playListSelected && (
+                    <PlayListTracks
+                        playListId={playListSelected}
+                        userToken={userToken}
+                    />
+                )}
             </div>
-        )
-    }
+        );
+    };
 
     const checkLoging = () => {
         return userToken ? showLists() : <LoginRequired />;
-    }
+    };
 
     return (
-        <div className={`${className} my-lists-component`}>
-            {checkLoging()}
-        </div>
+        <div className={`${className} my-lists-component`}>{checkLoging()}</div>
     );
 };
 

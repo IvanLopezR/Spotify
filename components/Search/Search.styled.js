@@ -13,13 +13,13 @@ export default styled(Search).attrs({})`
     overflow-x: hidden;
     overflow-y: hidden;
     .search {
-        &__container{
+        &__container {
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            &__notification{
+            &__notification {
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -30,7 +30,7 @@ export default styled(Search).attrs({})`
                 align-items: center;
                 z-index: 12;
                 opacity: 0;
-                &__container{
+                &__container {
                     width: 30%;
                     height: 20%;
                     display: flex;
@@ -40,24 +40,24 @@ export default styled(Search).attrs({})`
                     background-color: lightyellow;
                     padding: 50px;
                     border-radius: 20px;
-                    &__text{
+                    &__text {
                         font-size: 1.2rem;
                     }
                 }
             }
-            &__title{
+            &__title {
                 text-align: center;
                 font-size: 2.7rem;
                 font-weight: 600;
                 margin-bottom: 50px;
             }
-            &__principal{
+            &__principal {
                 width: max-content;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
                 height: 65%;
-                &__input{
+                &__input {
                     width: 300px;
                     height: 50px;
                     font-size: 1.5rem;
@@ -66,18 +66,18 @@ export default styled(Search).attrs({})`
                     padding: 5px 20px;
                     margin: 0 50px;
                 }
-                &__results{
+                &__results {
                     height: 40vh;
                     overflow-y: scroll;
                     padding: 0 20px;
                     border-radius: 20px;
-                    background-color: rgb(203,118,108,.5);
-                    &__list{
+                    background-color: rgb(203, 118, 108, 0.5);
+                    &__list {
                         padding-inline-start: 0;
                         list-style-type: none;
                     }
                 }
-                &__playLists{
+                &__playLists {
                     width: 20%;
                     padding: 25px 25px 5px;
                     background-color: lightgreen;
@@ -86,11 +86,11 @@ export default styled(Search).attrs({})`
                     border-bottom-left-radius: 20px;
                     border-bottom-right-radius: 20px;
                     border-top-right-radius: 20px;
-                    &__title{
+                    &__title {
                         text-align: center;
                         font-size: 1.25rem;
                     }
-                    &__list{
+                    &__list {
                         padding-inline-start: 20px;
                     }
                 }
@@ -99,11 +99,8 @@ export default styled(Search).attrs({})`
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
-
     }
 
     @media (min-width: 1700px) {
-
     }
-
 `;

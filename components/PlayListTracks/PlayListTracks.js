@@ -22,7 +22,7 @@ const PlayListTracks = ({ className, playListId, userToken }) => {
         <div className={`${className} playlist-tracks`}>
             <ul className="playlist-tracks__list">
                 {tracks?.map((item, key) => {
-                    return <ItemTrack item={item.track} key={key} />
+                    return <ItemTrack item={item.track} key={key} />;
                 })}
             </ul>
         </div>

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import User from './User';
+import User from "./User";
 
 export default styled(User).attrs({})`
     position: absolute;
@@ -11,29 +11,26 @@ export default styled(User).attrs({})`
     flex-direction: row-reverse;
     align-items: center;
     .user {
-        &__img{
+        &__img {
             width: 100%;
             margin-left: 15px;
         }
-        &__text{
+        &__text {
             display: flex;
             flex-direction: column;
             text-align: end;
-            &__name{
+            &__name {
                 font-size: 1rem;
             }
-            &__email{
-                font-size: .8rem;
+            &__email {
+                font-size: 0.8rem;
             }
         }
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
-
     }
 
     @media (min-width: 1700px) {
-
     }
-
 `;

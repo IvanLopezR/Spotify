@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 
-import { modalAnimation } from '../Search/Search.animations';
+import { modalAnimation } from "../Search/Search.animations";
 
 const axios = require("axios");
 
@@ -23,17 +23,21 @@ const NewListForm = ({ className, strings, userToken }) => {
 
     useEffect(() => {
         const data = userID(userToken);
-        axios(data.endpoint, data.atributes).then(response => {
+        axios(data.endpoint, data.atributes)
+            .then((response) => {
                 setUserInfo(response.data);
-            }).catch(error => console.log(error.response.data.error));
-    },[userToken])
+            })
+            .catch((error) => console.log(error.response.data.error));
+    }, [userToken]);
 
     useEffect(() => {
         const data = userID(userToken);
-        axios(data.endpoint, data.atributes).then(response => {
+        axios(data.endpoint, data.atributes)
+            .then((response) => {
                 setUserInfo(response.data);
-            }).catch(error => console.log(error.response.data.error));
-    },[])
+            })
+            .catch((error) => console.log(error.response.data.error));
+    }, []);
 
     const handleInputName = (string) => {
         setInputName(string);
@@ -44,32 +48,42 @@ const NewListForm = ({ className, strings, userToken }) => {
     };
 
     const finishedAnimation = () => {
-        document.getElementById("Name").value="";
-        document.getElementById("Description").value="";
+        document.getElementById("Name").value = "";
+        document.getElementById("Description").value = "";
         setInputName("");
         setInputDescription("");
         document.getElementById("Name").focus();
-    }
+    };
 
     const createList = () => {
-        const data = createNewList(inputName, inputDescription, userInfo.id, userToken);
+        const data = createNewList(
+            inputName,
+            inputDescription,
+            userInfo.id,
+            userToken
+        );
         axios(data.endpoint, data.atributes)
             .then((response) => {
                 console.log(response);
-                modalAnimation(modalRef,finishedAnimation);
+                modalAnimation(modalRef, finishedAnimation);
             })
             .catch((error) => console.log(error.response.data.error));
-    }
+    };
 
     const showForm = () => {
         return (
             <div className="new-list-form__container">
-                <div className="new-list-form__container__notification" ref={modalRef}>
+                <div
+                    className="new-list-form__container__notification"
+                    ref={modalRef}
+                >
                     <div className="new-list-form__container__notification__container">
                         <p className="new-list-form__container__notification__container__text">{`Lista ${inputName} creada con éxito`}</p>
                     </div>
                 </div>
-                <p className="new-list-form__container__title">{strings.title}</p>
+                <p className="new-list-form__container__title">
+                    {strings.title}
+                </p>
                 <div className="new-list-form__container__principal">
                     <input
                         className="new-list-form__container__principal__input"
@@ -84,9 +98,11 @@ const NewListForm = ({ className, strings, userToken }) => {
                         id="Description"
                         type="text"
                         placeholder={strings.description}
-                        onInput={(e) => handleInputDescription(e.currentTarget.value)}
+                        onInput={(e) =>
+                            handleInputDescription(e.currentTarget.value)
+                        }
                     ></input>
-                    <button onClick={()=>createList()}>{strings.btn}</button>
+                    <button className="new-list-form__container__principal__btn" onClick={() => createList()}>{strings.btn}</button>
                 </div>
             </div>
         );
@@ -102,7 +118,7 @@ const NewListForm = ({ className, strings, userToken }) => {
 NewListForm.propTypes = {
     className: PropTypes.string,
     strings: PropTypes.object,
-    userToken: PropTypes.any
+    userToken: PropTypes.any,
 };
 
 export default connect(mapStateToProps, null)(NewListForm);

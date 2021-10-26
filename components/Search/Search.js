@@ -1,9 +1,14 @@
 import React, { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 
-import { modalAnimation } from './Search.animations';
+import { modalAnimation } from "./Search.animations";
 
-import { LoginRequired, ItemArtist, ItemTrack, ItemPlayLists } from "../../components";
+import {
+    LoginRequired,
+    ItemArtist,
+    ItemTrack,
+    ItemPlayLists,
+} from "../../components";
 
 const axios = require("axios");
 
@@ -51,7 +56,7 @@ const Search = ({ className, strings, type, userToken }) => {
                 setPlayLists(response.data);
             })
             .catch((error) => console.log(error.response.data.error));
-    },[userToken]);
+    }, [userToken]);
 
     const handleInput = (string) => {
         setInput(string);
@@ -59,53 +64,59 @@ const Search = ({ className, strings, type, userToken }) => {
 
     const trackSelected = (track) => {
         setTrack(track);
-    }
+    };
 
     const addTrackToList = (listSelected) => {
         setListSelected(listSelected);
-        const data = addTrackToPlaylist(listSelected.id,track.uri,userToken);
+        const data = addTrackToPlaylist(listSelected.id, track.uri, userToken);
         axios(data.endpoint, data.atributes)
             .then((response) => {
                 console.log(response);
                 modalAnimation(modalRef, finishedAnimation);
             })
             .catch((error) => console.log(error.response.data.error));
-        document.getElementsByClassName("search__container__principal__input")[0].focus();
-    }
+        document
+            .getElementsByClassName("search__container__principal__input")[0]
+            .focus();
+    };
 
     const finishedAnimation = () => {
         setTrack(null);
-    }
+    };
 
     const list = () => {
         if (finds !== null) {
-            if(isTrack){
+            if (isTrack) {
                 return finds.tracks.items?.map((item, key) => {
                     return (
-                        <ItemTrack item={item} key={key} trackSelected={trackSelected} />
+                        <ItemTrack
+                            item={item}
+                            key={key}
+                            trackSelected={trackSelected}
+                        />
                     );
                 });
-            } else{
+            } else {
                 return finds.artists.items?.map((item, key) => {
-                    return (
-                        <ItemArtist item={item} key={key} />
-                    );
+                    return <ItemArtist item={item} key={key} />;
                 });
             }
         }
     };
 
     const listPlayList = () => {
-        if(playLists){
+        if (playLists) {
             return playLists.items?.map((item, key) => {
                 return (
-                    <ItemPlayLists item={item} key={key} addTrackToList={addTrackToList} />
+                    <ItemPlayLists
+                        item={item}
+                        key={key}
+                        addTrackToList={addTrackToList}
+                    />
                 );
             });
-        } else{
-            return (
-                <p>{strings.noPlayLists}</p>
-            )
+        } else {
+            return <p>{strings.noPlayLists}</p>;
         }
     };
 
@@ -114,7 +125,7 @@ const Search = ({ className, strings, type, userToken }) => {
             <div className="search__container">
                 <div className="search__container__notification" ref={modalRef}>
                     <div className="search__container__notification__container">
-                        <p className="search__container__notification__container__text">{`${track?.name} añadida correctamente a la lista ${listSelected?.name}`}</p>
+                        <p className="search__container__notification__container__text">{`\'${track?.name}\' añadida correctamente a la lista \'${listSelected?.name}\'`}</p>
                     </div>
                 </div>
                 <p className="search__container__title">{strings.title}</p>
@@ -136,7 +147,9 @@ const Search = ({ className, strings, type, userToken }) => {
                     )}
                     {track && (
                         <div className="search__container__principal__playLists">
-                            <p className="search__container__principal__playLists__title">{strings.playListsTitle}</p>
+                            <p className="search__container__principal__playLists__title">
+                                {strings.playListsTitle}
+                            </p>
                             <ul className="search__container__principal__playLists__list">
                                 {listPlayList()}
                             </ul>

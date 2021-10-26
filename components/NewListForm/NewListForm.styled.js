@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import NewListForm from './NewListForm';
+import NewListForm from "./NewListForm";
 
 export default styled(NewListForm).attrs({})`
     width: 100vw;
@@ -13,13 +13,13 @@ export default styled(NewListForm).attrs({})`
     overflow-x: hidden;
     overflow-y: hidden;
     .new-list-form {
-        &__container{
+        &__container {
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            &__notification{
+            &__notification {
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -30,7 +30,7 @@ export default styled(NewListForm).attrs({})`
                 align-items: center;
                 z-index: 12;
                 opacity: 0;
-                &__container{
+                &__container {
                     width: 30%;
                     height: 20%;
                     display: flex;
@@ -40,24 +40,24 @@ export default styled(NewListForm).attrs({})`
                     background-color: lightgreen;
                     padding: 50px;
                     border-radius: 20px;
-                    &__text{
+                    &__text {
                         font-size: 1.2rem;
                     }
                 }
             }
-            &__title{
+            &__title {
                 text-align: center;
                 font-size: 2.7rem;
                 font-weight: 600;
                 margin-bottom: 50px;
             }
-            &__principal{
+            &__principal {
                 width: max-content;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
                 height: 65%;
-                &__input{
+                &__input {
                     width: 200px;
                     height: 50px;
                     font-size: 1.5rem;
@@ -66,16 +66,22 @@ export default styled(NewListForm).attrs({})`
                     padding: 5px 20px;
                     margin: 0 20px;
                 }
+                &__btn {
+                    border-radius: 20%;
+                    padding: 16px;
+                    font-size: 1rem;
+                    margin-left: 20px;
+                    border: none;
+                    cursor: pointer;
+                    background-color: lightblue;
+                }
             }
         }
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
-
     }
 
     @media (min-width: 1700px) {
-
     }
-
 `;

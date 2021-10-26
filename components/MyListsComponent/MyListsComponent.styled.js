@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import MyListsComponent from './MyListsComponent';
+import MyListsComponent from "./MyListsComponent";
 
 export default styled(MyListsComponent).attrs({})`
     width: 100vw;
@@ -13,16 +13,16 @@ export default styled(MyListsComponent).attrs({})`
     overflow-x: hidden;
     overflow-y: hidden;
     .my-lists-component {
-        &__container{
+        &__container {
             width: 80%;
             margin-top: -100px;
-            &__title{
+            &__title {
                 text-align: center;
                 font-size: 2.7rem;
                 font-weight: 600;
                 margin-bottom: 50px;
             }
-            &__list{
+            &__list {
                 width: 70%;
             }
         }
@@ -32,7 +32,7 @@ export default styled(MyListsComponent).attrs({})`
         .slick-dots {
             position: absolute;
             display: flex !important;
-            width: 80%;
+            width: 75%;
             flex-direction: row;
             justify-content: center;
             margin-top: 25px;
@@ -73,37 +73,43 @@ export default styled(MyListsComponent).attrs({})`
         width: 100vw;
     }
 
-    .slick-track{
+    .slick-track {
         display: flex;
         flex-direction: row;
     }
 
-    .slick-slide{
+    .slick-slide {
         display: flex;
         flex-direction: column;
     }
 
-    .slick-prev, .slick-next{
+    .slick-prev,
+    .slick-next {
         position: absolute;
-        top: 45%;
+        top: 43%;
         z-index: 5;
         cursor: pointer;
+        border-radius: 10px;
+        border: none;
+        padding: 8px;
+        background-color: #ffffff;
+        :hover{
+            background-color: lightgreen;
+            transition: background-color ease .5s;
+        }
     }
 
-    .slick-prev{
+    .slick-prev {
         left: 2%;
     }
 
-    .slick-next{
+    .slick-next {
         right: 2%;
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
-
     }
 
     @media (min-width: 1700px) {
-
     }
-
 `;

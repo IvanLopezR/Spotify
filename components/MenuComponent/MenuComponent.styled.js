@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import MenuComponent from './MenuComponent';
+import MenuComponent from "./MenuComponent";
 
 export default styled(MenuComponent).attrs({})`
     width: 100%;
@@ -11,35 +11,35 @@ export default styled(MenuComponent).attrs({})`
     align-items: center;
     position: relative;
     .menu-component {
-        &__container{
-            &__list{
+        &__container {
+            &__list {
                 list-style-type: none;
                 display: flex;
                 flex-wrap: wrap;
                 margin: 25px 20%;
                 justify-content: center;
-                &__element{
+                font-size: 1.5rem;
+                &__element {
                     padding-inline-start: 0;
                     width: 300px;
                     height: 150px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background-color: #ffffff;
+                    background-color: lightgreen;
                     border-radius: 20px;
                     opacity: 1;
                     cursor: pointer;
                     margin: 25px;
-                    &:hover{
-                        background-color: rgb(255,255,255,.5);
-                        transition: background-color ease .5s;
+                    &:hover {
+                        background-color: rgb(255, 255, 255, 0.5);
+                        transition: background-color ease 0.5s;
                     }
-                    &__text{
-
+                    &__text {
                     }
                 }
             }
-            &__title{
+            &__title {
                 text-align: center;
                 font-size: 2.7rem;
                 font-weight: 600;
@@ -49,11 +49,8 @@ export default styled(MenuComponent).attrs({})`
     }
 
     @media (min-width: 1400px) and (min-height: 800px) {
-
     }
 
     @media (min-width: 1700px) {
-
     }
-
 `;
